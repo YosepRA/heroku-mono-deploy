@@ -9,7 +9,7 @@ const app = express();
 const { PORT } = process.env;
 const port = PORT || 3000;
 
-app.use(express.static(path.join(__dirname, '../ui/public')));
+app.use(express.static(path.join(__dirname, './ui/dist')));
 
 app.get('/index', (req, res) => {
   res.send('Index route');
